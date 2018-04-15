@@ -489,6 +489,7 @@ public class Kernel extends Thread
       {
         page.inMemTime = page.inMemTime + 10;
         page.lastTouchTime = page.lastTouchTime + 10;
+        page.changeRbits(page.R);
       }
     }
     runs++;

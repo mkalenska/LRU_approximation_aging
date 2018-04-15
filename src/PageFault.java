@@ -12,7 +12,7 @@ import java.util.*;
 public class PageFault {
 
   /**
-   * The page replacement algorithm for the memory management sumulator.
+   * The page replacement algorithm for the memory management simulator.
    * This method gets called whenever a page needs to be replaced.
    * <p>
    * The page replacement algorithm included with the simulator is 
@@ -52,35 +52,23 @@ public class PageFault {
   public static void replacePage ( Vector mem , int virtPageNum , int replacePageNum , ControlPanel controlPanel ) 
   {
     int count = 0;
-    int oldestPage = -1;
-    int oldestTime = 0;
-    int firstPage = -1;
-    int map_count = 0;
-    boolean mapped = false;
+    int theLowesRbitsValue = 256;
+    int pageNumber = 0;
 
-    while ( ! (mapped) || count != virtPageNum ) {
+    while ( count != virtPageNum ) {
       Page page = ( Page ) mem.elementAt( count );
       if ( page.physical != -1 ) {
-        if (firstPage == -1) {
-          firstPage = count;
-        }
-        if (page.inMemTime > oldestTime) {
-          oldestTime = page.inMemTime;
-          oldestPage = count;
-          mapped = true;
-        }
+          System.out.println(count + " " + page.Rbits);
+          if (page.valueRbits() < theLowesRbitsValue) {
+            theLowesRbitsValue = page.valueRbits();
+            pageNumber = count;
+          }
       }
       count++;
-      if ( count == virtPageNum ) {
-        mapped = true;
-      }
     }
-    if (oldestPage == -1) {
-      oldestPage = firstPage;
-    }
-    Page page = ( Page ) mem.elementAt( oldestPage );
-    Page nextpage = ( Page ) mem.elementAt( replacePageNum );
-    controlPanel.removePhysicalPage( oldestPage );
+    Page page = (Page) mem.elementAt(pageNumber);
+    Page nextpage = (Page) mem.elementAt(replacePageNum);
+    controlPanel.removePhysicalPage(pageNumber);
     nextpage.physical = page.physical;
     nextpage.R = 1;
     controlPanel.addPhysicalPage(replacePageNum, nextpage.physical);
@@ -89,5 +77,8 @@ public class PageFault {
     page.R = 0;
     page.M = 0;
     page.physical = -1;
+    for(int i = 0; i < 8; i++){
+        page.Rbits.set(i, 0);
+    }
   }
 }
