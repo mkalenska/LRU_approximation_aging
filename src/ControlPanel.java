@@ -955,269 +955,204 @@ public class ControlPanel extends Frame
   }
 
   public void setStatus(String status) {
-    statusValueLabel.setText(status);
+      statusValueLabel.setText(status);
   }
 
-  public void addPhysicalPage( int pageNum , int physicalPage ) 
+  public void addPhysicalPage(int pageNum, int physicalPage)
   {
-    if ( physicalPage == 0 ) 
-    {
-      l0.setText( "page " + pageNum );
-    }
-    else if ( physicalPage == 1) 
-    {
-      l1.setText( "page " + pageNum );
-    }
-    else if ( physicalPage == 2)
-    {
-      l2.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 3)
-    {
-      l3.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 4)
-    {
-      l4.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 5)
-    {
-      l5.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 6)
-    {
-      l6.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 7)
-    {
-      l7.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 8)
-    {
-      l8.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 9)
-    {
-      l9.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 10)
-    {
-      l10.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 11)
-    {
-      l11.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 12)
-    {
-      l12.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 13)
-    {
-      l13.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 14)
-    {
-      l14.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 15)
-    {
-      l15.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 16)
-    {
-      l16.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 17)
-    {
-      l17.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 18)
-    {
-      l18.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 19)
-    {
-      l19.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 20)
-    {
-      l20.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 21)
-    {
-      l21.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 22)
-    {
-      l22.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 23)
-    {
-      l23.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 24)
-    {
-      l24.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 25)
-    {
-      l25.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 26)
-    {
-      l26.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 27)
-    {
-      l27.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 28)
-    {
-      l28.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 29)
-    {
-      l29.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 30)
-    {
-      l30.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 31)
-    {
-      l31.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 32)
-    {
-      l32.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 33)
-    {
-      l33.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 34)
-    {
-      l34.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 35)
-    {
-      l35.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 36)
-    {
-      l36.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 37)
-    {
-      l37.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 38)
-    {
-      l38.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 39)
-    {
-      l39.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 40)
+    if (pageNum == 0)
     {
-      l40.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 41)
+      l0.setText("page " + physicalPage);
+    } else if (pageNum == 1)
     {
-      l41.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 42)
+      l1.setText("page " + physicalPage);
+    } else if (pageNum == 2)
     {
-      l42.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 43)
+      l2.setText("page " + physicalPage);
+    } else if (pageNum == 3)
     {
-      l43.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 44)
+      l3.setText("page " + physicalPage);
+    } else if (pageNum == 4)
     {
-      l44.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 45)
+      l4.setText("page " + physicalPage);
+    } else if (pageNum == 5)
     {
-      l45.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 46)
+      l5.setText("page " + physicalPage);
+    } else if (pageNum == 6)
     {
-      l46.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 47)
+      l6.setText("page " + physicalPage);
+    } else if (pageNum == 7)
     {
-      l47.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 48)
+      l7.setText("page " + physicalPage);
+    } else if (pageNum == 8)
     {
-      l48.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 49)
+      l8.setText("page " + physicalPage);
+    } else if (pageNum == 9)
     {
-      l49.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 50)
+      l9.setText("page " + physicalPage);
+    } else if (pageNum == 10)
     {
-      l50.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 51)
+      l10.setText("page " + physicalPage);
+    } else if (pageNum == 11)
     {
-      l51.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 52)
+      l11.setText("page " + physicalPage);
+    } else if (pageNum == 12)
     {
-      l52.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 53)
+      l12.setText("page " + physicalPage);
+    } else if (pageNum == 13)
     {
-      l53.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 54)
+      l13.setText("page " + physicalPage);
+    } else if (pageNum == 14)
     {
-      l54.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 55)
+      l14.setText("page " + physicalPage);
+    } else if (pageNum == 15)
     {
-      l55.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 56)
+      l15.setText("page " + physicalPage);
+    } else if (pageNum == 16)
     {
-      l56.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 57)
+      l16.setText("page " + physicalPage);
+    } else if (pageNum == 17)
     {
-      l57.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 58)
+      l17.setText("page " + physicalPage);
+    } else if (pageNum == 18)
     {
-      l58.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 59)
+      l18.setText("page " + physicalPage);
+    } else if (pageNum == 19)
     {
-      l59.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 60)
+      l19.setText("page " + physicalPage);
+    } else if (pageNum == 20)
     {
-      l60.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 61)
+      l20.setText("page " + physicalPage);
+    } else if (pageNum == 21)
     {
-      l61.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 62)
+      l21.setText("page " + physicalPage);
+    } else if (pageNum == 22)
     {
-      l62.setText( "page " + pageNum );
-    } 
-    else if ( physicalPage == 63)
+      l22.setText("page " + physicalPage);
+    } else if (pageNum == 23)
     {
-      l63.setText( "page " + pageNum );
-    } 
-    else 
+      l23.setText("page " + physicalPage);
+    } else if (pageNum == 24)
     {
+      l24.setText("page " + physicalPage);
+    } else if (pageNum == 25)
+    {
+      l25.setText("page " + physicalPage);
+    } else if (pageNum == 26)
+    {
+      l26.setText("page " + physicalPage);
+    } else if (pageNum == 27)
+    {
+      l27.setText("page " + physicalPage);
+    } else if (pageNum == 28)
+    {
+      l28.setText("page " + physicalPage);
+    } else if (pageNum == 29)
+    {
+      l29.setText("page " + physicalPage);
+    } else if (pageNum == 30)
+    {
+      l30.setText("page " + physicalPage);
+    } else if (pageNum == 31)
+    {
+      l31.setText("page " + physicalPage);
+    } else if (pageNum == 32)
+    {
+      l32.setText("page " + physicalPage);
+    } else if (pageNum == 33)
+    {
+      l33.setText("page " + physicalPage);
+    } else if (pageNum == 34)
+    {
+      l34.setText("page " + physicalPage);
+    } else if (pageNum == 35)
+    {
+      l35.setText("page " + physicalPage);
+    } else if (pageNum == 36)
+    {
+      l36.setText("page " + physicalPage);
+    } else if (pageNum == 37)
+    {
+      l37.setText("page " + physicalPage);
+    } else if (pageNum == 38)
+    {
+      l38.setText("page " + physicalPage);
+    } else if (pageNum == 39)
+    {
+      l39.setText("page " + physicalPage);
+    } else if (pageNum == 40)
+    {
+      l40.setText("page " + physicalPage);
+    } else if (pageNum == 41)
+    {
+      l41.setText("page " + physicalPage);
+    } else if (pageNum == 42)
+    {
+      l42.setText("page " + physicalPage);
+    } else if (pageNum == 43)
+    {
+      l43.setText("page " + physicalPage);
+    } else if (pageNum == 44)
+    {
+      l44.setText("page " + physicalPage);
+    } else if (pageNum == 45)
+    {
+      l45.setText("page " + physicalPage);
+    } else if (pageNum == 46)
+    {
+      l46.setText("page " + physicalPage);
+    } else if (pageNum == 47)
+    {
+      l47.setText("page " + physicalPage);
+    } else if (pageNum == 48)
+    {
+      l48.setText("page " + physicalPage);
+    } else if (pageNum == 49)
+    {
+      l49.setText("page " + physicalPage);
+    } else if (pageNum == 50)
+    {
+      l50.setText("page " + physicalPage);
+    } else if (pageNum == 51)
+    {
+      l51.setText("page " + physicalPage);
+    } else if (pageNum == 52)
+    {
+      l52.setText("page " + physicalPage);
+    } else if (pageNum == 53)
+    {
+      l53.setText("page " + physicalPage);
+    } else if (pageNum == 54)
+    {
+      l54.setText("page " + physicalPage);
+    } else if (pageNum == 55)
+    {
+      l55.setText("page " + physicalPage);
+    } else if (pageNum == 56)
+    {
+      l56.setText("page " + physicalPage);
+    } else if (pageNum == 57)
+    {
+      l57.setText("page " + physicalPage);
+    } else if (pageNum == 58)
+    {
+      l58.setText("page " + physicalPage);
+    } else if (pageNum == 59)
+    {
+      l59.setText("page " + physicalPage);
+    } else if (pageNum == 60)
+    {
+      l60.setText("page " + physicalPage);
+    } else if (pageNum == 61)
+    {
+      l61.setText("page " + physicalPage);
+    } else if (pageNum == 62)
+    {
+      l62.setText("page " + physicalPage);
+    } else if (pageNum == 63)
+    {
+      l63.setText("page " + physicalPage);
+    } else {
       return;
     }
   }

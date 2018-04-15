@@ -443,6 +443,8 @@ public class Kernel extends Thread
           System.out.println( "READ " + Long.toString( instruct.addr , addressradix ) + " ... okay" );
         }
       }
+      controlPanel.RValueLabel.setText(String.valueOf(page.R));
+      controlPanel.MValueLabel.setText(String.valueOf(page.M));
     }
     if ( instruct.inst.startsWith( "WRITE" ) ) 
     {
@@ -461,6 +463,7 @@ public class Kernel extends Thread
       } 
       else 
       {
+        page.R = 1;
         page.M = 1;
         page.lastTouchTime = 0;
         if ( doFileLog )
@@ -472,6 +475,8 @@ public class Kernel extends Thread
           System.out.println( "WRITE " + Long.toString(instruct.addr , addressradix) + " ... okay" );
         }
       }
+      controlPanel.RValueLabel.setText(String.valueOf(page.R));
+      controlPanel.MValueLabel.setText(String.valueOf(page.M));
     }
     for ( i = 0; i < virtPageNum; i++ ) 
     {
