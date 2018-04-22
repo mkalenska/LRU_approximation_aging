@@ -47,6 +47,7 @@ public class Kernel extends Thread
     long low = 0;
     long addr = 0;
     long address_limit = (block * virtPageNum+1)-1;
+    int size = 0;
   
     if ( config != null )
     {
@@ -197,6 +198,24 @@ public class Kernel extends Thread
               Page page = (Page) memVector.elementAt(i);
               page.high = (block * (i + 1))-1;
               page.low = block * i;
+            }
+          }
+          if (line.startsWith("rbitsvectorsize"))
+          {
+            StringTokenizer st = new StringTokenizer(line);
+            while (st.hasMoreTokens())
+            {
+              tmp = st.nextToken();
+              tmp = st.nextToken();
+              size = Integer.parseInt(tmp, 10);
+            }
+            for (i = 0; i <= virtPageNum; i++)
+            {
+              Page page = (Page) memVector.elementAt(i);
+              page.RbitsVectorSize = size;
+              for(int k = 0; k < size; k++){
+                page.Rbits.add(0);
+              }
             }
           }
           if (line.startsWith("addressradix")) 

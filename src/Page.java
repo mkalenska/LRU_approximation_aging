@@ -11,6 +11,7 @@ public class Page
   public long high;
   public long low;
   public Vector<Integer> Rbits;
+  public int RbitsVectorSize;
 
   public Page( int id, int physical, byte R, byte M, int inMemTime, int lastTouchTime, long high, long low ) 
   {
@@ -23,22 +24,19 @@ public class Page
     this.high = high;
     this.low = low;
     this.Rbits = new Vector<Integer>();
-    for(int i = 0; i < 8; i++){
-      this.Rbits.add(0);
-    }
   }
 
   public void changeRbits(int val){
     this.Rbits.add(0, val);
-    this.Rbits.remove(8);
+    this.Rbits.remove(this.RbitsVectorSize);
   }
 
   public int valueRbits(){
-    int res = 0;
-    for(int i = 7; i >= 0; i--){
-      res += Rbits.get(i) * Math.pow(2, 7-i);
+    String bits = "";
+    for (int i = 0; i < this.RbitsVectorSize; i++){
+      bits += String.valueOf(this.Rbits.get(i));
     }
-    return res;
+    return Integer.parseInt(bits, 2);
   }
 
 }
